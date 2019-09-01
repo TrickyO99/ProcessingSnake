@@ -1,0 +1,33 @@
+boolean menu = false;
+int win = 0;
+PFont font;
+
+void setup()
+{
+  fullScreen();
+  font = createFont("menuPolice.ttf", 96);
+}
+
+void draw()
+{
+  clear();
+  background(int(random(255)), int(random(255)), int(random(255)));
+  if (menu == true) {
+    drawMenu(font);
+  } else if (win != 0) {
+    //draw_end();
+  } else {
+    drawGame(); 
+  }
+}
+
+//void keyPressed()
+//{
+  //if (menu == true) {
+    //key_menu();
+  //} else if (win != 0) {
+    //key_end();
+  //} else {
+    //key_game();
+  //}
+//}
